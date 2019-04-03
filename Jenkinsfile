@@ -3,8 +3,8 @@ pipeline {
     docker {
       image 'node:8-alpine'
       args '''--name react
+ --expose=3000
     --env "VIRTUAL_HOST=react.mastertest.cf" 
-    --env "VIRTUAL_PORT=3000" 
     --env "LETSENCRYPT_HOST=react.mastertest.cf" 
     --env "LETSENCRYPT_EMAIL=juliusmubajje1@gmail.com" '''
     }
